@@ -3,8 +3,11 @@ Este é um CRUD simples proposto e desenvolvido como atividade no Senac RS, na f
 Contém:
 
 -Função de cadastro e login funcionais, de forma que atualiza o banco dinâmicamente conforme o cadastro de cada usuário.
+
 -Tabelas SQL já populadas com usuários e livros.
+
 -Função de registro de livros que reflete as mudanças no banco de dados.
+
 -Se logado como admin, a função de deletar livros da tabela e reinserir/atualizar pela mesma página. 
 
 Conta Admin para testes:
