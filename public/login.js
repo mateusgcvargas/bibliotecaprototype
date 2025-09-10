@@ -17,7 +17,6 @@ formlogin.addEventListener("submit", async (e) => {
         body: JSON.stringify({ nome, email })
     })
 
-
     const data = await response.json()
     
     //se o login for válido, nos atualiza como logados e nos manda para o indice
@@ -25,14 +24,14 @@ formlogin.addEventListener("submit", async (e) => {
         alert(data.message)
         window.location.href = "/livros/lista.html"
         localStorage.setItem("logged", "true")
-    } 
-        //se nossa conta de admin estiver no submit, atualiza o localstorage
+        localStorage.setItem("user_id", data.id) 
+    } else {
+        alert(data.message)
+        return
+    }
+
+    //se nossa conta de admin estiver no submit, atualiza o localstorage
     if (adminname && adminmail){
         localStorage.setItem("admin", "true")
     }
-
-    else {
-        alert(data.message)
-    }
-    
 })
